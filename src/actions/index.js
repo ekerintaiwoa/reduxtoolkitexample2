@@ -26,3 +26,46 @@ function orderBook(){
 
 
 }
+
+
+
+// create the state of the app, a state is an object 
+
+
+
+const initialState = {
+
+   numberOfBooks :  200 
+
+}
+
+
+// create a Reducer , a reducer is a function that accepts the state of the app and then an action that can change the state
+
+
+
+const bookReducer= (state=initialState , action )=>{
+
+      // we make a switch statement to show possible action types
+
+
+      switch(action.type){
+
+          case ORDER_BOOK: 
+
+             return {
+                  // creates a copy of the state  and update numnber of book
+                ...state ,
+                numberOfBooks : numberOfBooks-6   
+             }
+            default :
+
+                return state
+
+
+      }
+
+
+
+
+}
