@@ -1,3 +1,9 @@
+const redux = require('redux');
+const createStore = redux.createStore();
+
+
+
+
 // creating a constant helps to prevent spelling mistaked
 const ORDER_BOOK = "BOOK_ORDERED" ;
 
@@ -64,6 +70,30 @@ const bookReducer= (state=initialState , action )=>{
 
 
       }
+
+
+
+     // create a store 
+
+     const store = createStore(bookReducer);
+
+     const getState = console.log('initialstate',store.getState()) ;
+
+       store.subscribe(()=>{
+
+
+        
+       })
+
+
+
+     
+
+
+
+
+
+
 
 
 
